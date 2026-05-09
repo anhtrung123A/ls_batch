@@ -14,6 +14,11 @@ class Settings:
     smtp_from_email: str
     smtp_from_name: str
     log_level: str
+    s3_endpoint: str
+    s3_access_key: str
+    s3_secret_key: str
+    s3_bucket: str
+    s3_leads_prefix: str
 
     @classmethod
     def from_env(cls) -> "Settings":
@@ -28,4 +33,9 @@ class Settings:
             smtp_from_email=os.getenv("SMTP_FROM_EMAIL", ""),
             smtp_from_name=os.getenv("SMTP_FROM_NAME", ""),
             log_level=os.getenv("LOG_LEVEL", "INFO"),
+            s3_endpoint=os.getenv("S3_ENDPOINT", "http://minio:9000"),
+            s3_access_key=os.getenv("S3_ACCESS_KEY", os.getenv("MINIO_ROOT_USER", "")),
+            s3_secret_key=os.getenv("S3_SECRET_KEY", os.getenv("MINIO_ROOT_PASSWORD", "")),
+            s3_bucket=os.getenv("S3_BUCKET", "lingua-sync"),
+            s3_leads_prefix=os.getenv("S3_LEADS_PREFIX", "leads/"),
         )
