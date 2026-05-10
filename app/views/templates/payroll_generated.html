@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monthly Payroll</title>
+</head>
+<body style="
+  margin: 0;
+  padding: 32px 20px;
+  background-color: #f7f7f7;
+  font-family: 'Times New Roman', serif;
+  color: #222;
+  line-height: 1.6;
+">
+  <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 680px; margin: 0 auto;">
+    <tr>
+      <td>
+        <table width="100%" cellpadding="0" cellspacing="0" style="background: #ffffff; border: 1px solid #dcdcdc; padding: 36px;">
+          <tr>
+            <td>
+              <h2 style="margin: 0 0 8px; font-size: 28px; font-weight: bold; color: #111;">Monthly Payroll</h2>
+              <div style="width: 60px; height: 1px; background: #999; margin-bottom: 28px;"></div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-bottom: 22px;">
+              <p style="margin: 0 0 12px;">Hello <strong>{{FULL_NAME}}</strong>,</p>
+              <p style="margin: 0;">Your payroll for <strong>{{MONTH_YEAR}}</strong> has been generated successfully.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table width="100%" cellpadding="10" cellspacing="0" style="border-collapse: collapse; border: 1px solid #cfcfcf;">
+                <thead>
+                  <tr style="background: #f2f2f2;">
+                    <th align="left" style="border-bottom: 1px solid #cfcfcf; font-weight: bold;">Component</th>
+                    <th align="right" style="border-bottom: 1px solid #cfcfcf; font-weight: bold;">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="border-bottom: 1px solid #e5e5e5;">Base salary</td>
+                    <td align="right" style="border-bottom: 1px solid #e5e5e5;">{{BASE_AMOUNT}}</td>
+                  </tr>
+                  <tr>
+                    <td style="border-bottom: 1px solid #e5e5e5;">Teaching amount</td>
+                    <td align="right" style="border-bottom: 1px solid #e5e5e5;">{{TEACHING_AMOUNT}}</td>
+                  </tr>
+                  <tr>
+                    <td style="border-bottom: 1px solid #e5e5e5;">KPI amount</td>
+                    <td align="right" style="border-bottom: 1px solid #e5e5e5;">{{KPI_AMOUNT}}</td>
+                  </tr>
+                  <tr style="background: #fafafa;">
+                    <td style="border-top: 2px solid #cfcfcf; font-weight: bold;">Gross amount</td>
+                    <td align="right" style="border-top: 2px solid #cfcfcf; font-weight: bold;">{{GROSS_AMOUNT}}</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: bold; padding-top: 14px;">Net amount</td>
+                    <td align="right" style="font-weight: bold; padding-top: 14px; font-size: 18px;">{{NET_AMOUNT}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top: 32px; font-size: 15px; color: #444;">
+              <p style="margin: 0 0 4px;">Best regards,</p>
+              <p style="margin: 0;">LinguaSync Team</p>
+              <p style="margin: 12px 0 0;">
+                If you have any questions, please contact
+                <a href="mailto:lingua_sync@admin.com">lingua_sync@admin.com</a>.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
